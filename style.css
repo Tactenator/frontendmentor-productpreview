@@ -8,33 +8,34 @@
     color: hsl(158, 36%, 37%);
     margin: 0; 
     padding: 0; 
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
-.attribution {
-    font-size: 11px; text-align: center; 
-}
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
+.container{
+    display: flex; 
+    height: 100vh; 
+    justify-content: center;
+    align-items: center;
+    padding: 28px 16px; 
 }
 
 .card
 {
     display: flex; 
-    max-height: 900px; 
-    max-width: 735px; 
-    justify-content:stretch;
-    align-items: center;
-    margin-left: auto; 
-    margin-right: auto;
-    margin-top: 150px;
+    width: 700px;  
     padding: 10px; 
-    
+    overflow: hidden;
 }
 
-.card img{
-    max-width: 50%;
-    min-height: 550px; 
-    
+.image-container
+{
+    width: 50%;
+}
+
+.image-container img{
+    width: 100%; 
+    height: 100%;
 }
 
 .image1
@@ -48,12 +49,17 @@
     display: none;
 }
 
+.details-container
+{
+    width: 50%;
+    
+}
+
 .details
 {
     background: #ffffff;
-    min-height: 500px;
-    max-height: 500px; 
-    max-width: 400px; 
+    height: 100%; 
+    width: 100%; 
     padding: 25px; 
     border-radius: 0 25px 25px 0;
 }
@@ -92,7 +98,7 @@
     background: #ffffff;
     justify-content: flex-start;
     align-items: center;
-    gap: 10%
+    gap: 10%;
 }
 
 .prices h1{
@@ -108,8 +114,8 @@
 }
 
 .details button{
-    min-width: 90%;
-    padding: 20px; 
+    min-width: 100%;
+    padding: 16px; 
     color: #ffffff;
     background:hsl(158, 36%, 37%);
     font-size: 16px;
@@ -138,23 +144,24 @@
     border-radius: 0 0 0 0;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
+
     .card {
         display: block; 
-        max-height: 800px; 
-        max-width: 735px; 
-        justify-content:stretch;
-        align-items: center;
-        margin-left: auto; 
-        margin-right: auto;
-        margin-top: 150px;
-        padding: 10px; 
+        width: 400px;
     }
 
     .card img{
-        max-width: 100%;
-        min-height: 80%; 
+        max-width: 100%; 
         border-radius: 25px 25px 0 0;
+    }
+
+    .image-container{
+        width: 100%;
+    }
+
+    .details-container{
+        width: 100%;
     }
 
     .image1
@@ -182,7 +189,7 @@
         color: hsl(212, 21%, 14%);
         font-family: 'Fraunces', serif; 
         font-weight: bold; 
-        font-size: 34px; 
+        font-size: 32px; 
         margin: 15px 0; 
     }
     
@@ -191,8 +198,8 @@
         color: hsl(228, 12%, 48%);
         letter-spacing: 0.3em;
         font-family: 'Montserrat', sans-serif;
-        font-size: 14px; 
-        margin: 28px 0; 
+        font-size: 12px; 
+        margin: 10px 0; 
     }
     
     .details p {
@@ -201,7 +208,7 @@
         font-family: 'Montserrat', sans-serif;
         font-weight: normal; 
         line-height: 1.6;
-        font-size: 16px;
+        font-size: 14px;
         padding: 5px; 
     }
 
